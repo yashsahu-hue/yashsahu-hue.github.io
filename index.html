@@ -78,13 +78,18 @@
     gap: 16px;
   }
   .nav-mark{
+    display: flex;
+    align-items: center;
+    gap: 8px;
     font-family: var(--mono);
-    font-size: 14px;
-    color: var(--amber);
+    font-size: 15px;
+    color: var(--text);
     text-decoration:none;
-    letter-spacing: 0.02em;
+    letter-spacing: 0.01em;
     white-space: nowrap;
   }
+  .nav-mark svg{ display:block; flex-shrink: 0; }
+  .nav-mark .accent{ color: var(--teal); }
   .nav-links{
     display:flex;
     gap: 22px;
@@ -413,7 +418,15 @@
 
 <header class="site-nav">
   <div class="nav-inner">
-    <a class="nav-mark" href="#top">ys / edge-ai</a>
+    <a class="nav-mark" href="#top">
+      <svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+        <path d="M7 19 Q14 8 21 19" fill="none" stroke="#4a5561" stroke-width="2"/>
+        <circle cx="7" cy="19" r="3.4" fill="#6fb8ac"/>
+        <circle cx="21" cy="19" r="3.4" fill="#6fb8ac"/>
+        <circle cx="14" cy="8.5" r="3" fill="#e0a458"/>
+      </svg>
+      edge<span class="accent">.ys</span>
+    </a>
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
       <li><a href="#research">Research</a></li>
@@ -485,7 +498,7 @@
         <div class="about-text">
           <p>I'm a PhD scholar in the Department of Computer Science and Engineering at <strong>IIT Gandhinagar</strong>, advised by <strong>Prof. Anirban Dasgupta</strong>. My work sits at the intersection of systems and machine learning: I study how to run AI inference efficiently when compute, memory, and network conditions can't be taken for granted.</p>
           <p>Concretely, that means <strong>adaptive split computing</strong> — dynamically choosing where a model's computation should happen across a device, one or more edge nodes, and the cloud — and <strong>efficient LLM/SLM deployment</strong> through quantization, LoRA, and knowledge distillation. I use reinforcement learning (PPO) and surrogate cost models to make these decisions in real time, as system conditions shift.</p>
-          <p>Before the PhD, I completed my B.Tech in Computer Science and Engineering (Cyber Security) where I built a foundation in data structures, operating systems, computer architecture, and security.</p>
+          <p>Before the PhD, I completed my B.Tech in Computer Science and Engineering (Cyber Security) at RGPV, where I built a foundation in data structures, operating systems, computer architecture, and security.</p>
           <div class="tag-row">
             <span class="tag">Split Computing</span>
             <span class="tag">Edge AI</span>
@@ -517,9 +530,9 @@
           </ul>
         </li>
         <li>
-          <span class="tl-date">2019 — 2023</span>
+          <span class="tl-date">2020 — 2024</span>
           <p class="tl-title">B.Tech in Computer Science and Engineering (Cyber Security)</p>
-          <p class="tl-org"> RGPV University, Bhopal</p>
+          <p class="tl-org">RGPV University, Bhopal</p>
           <ul class="tl-detail">
             <li>Coursework: Data Structures &amp; Algorithms, Operating Systems, Computer Architecture, DBMS, Machine Learning, Computer Networks, Cyber Security.</li>
           </ul>
